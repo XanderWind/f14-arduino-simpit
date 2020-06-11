@@ -3,6 +3,18 @@
 #include <SwitchMatrix.h>
 #include <DcsBios.h>
 
+const int PLT_ENGINE_MODE_L = 26; 
+const int PLT_ENGINE_MODE_R = 25;
+const int PLT_ASY_THRUST_LIMIT = 24;
+const int PLT_AUTOPLT_ENGAGE = 23;
+const int PLT_AUTOPLT_GT = 22;
+const int PLT_AUTOPLT_HDG = 21;
+const int PLT_AUTOPLT_ALT = 20;
+const int PLT_AUTOPLT_ACL = 19; 
+const int PLT_AUTOPLT_VECPCD = 18;
+const int PLT_AFCS_YAW = 17;
+const int PLT_AFCS_ROLL = 16;
+const int PLT_AFCS_PTICH = 15;
 const int PLT_FUEL_DUMP_PIN = 14;
 const int PLT_ANTI_SKID_BOTH_PIN = 13;
 const int PLT_ANTI_SKID_SPOILER_BK_PIN  = 12;
@@ -17,6 +29,16 @@ const int GEAR_UP_PIN = 4;
 const int MASTER_RESET_PIN = 3;
 const int EMERGENCY_STORES_JETTISON_PIN = 2;
 
+DcsBios::Switch2Pos pltEngineModeL("PLT_ENGINE_MODE_L", PLT_ENGINE_MODE_L);
+DcsBios::Switch2Pos pltEngineModeR("PLT_ENGINE_MODE_R", PLT_ENGINE_MODE_R);
+DcsBios::Switch2Pos pltAsyThrustLimit("PLT_ASY_THRUST_LIMIT", PLT_ASY_THRUST_LIMIT);
+DcsBios::Switch2Pos pltAutopltEngage("PLT_AUTOPLT_ENGAGE", PLT_AUTOPLT_ENGAGE);
+DcsBios::Switch3Pos pltAutopltHdg("PLT_AUTOPLT_HDG", PLT_AUTOPLT_HDG, PLT_AUTOPLT_GT);
+DcsBios::Switch2Pos pltAutopltAlt("PLT_AUTOPLT_ALT", PLT_AUTOPLT_ALT);
+DcsBios::Switch3Pos pltAutopltVectorCarrier("PLT_AUTOPLT_VECTOR_CARRIER", PLT_AUTOPLT_VECPCD, PLT_AUTOPLT_ACL);
+DcsBios::Switch2Pos pltAfcsYaw("PLT_AFCS_YAW", PLT_AFCS_YAW);
+DcsBios::Switch2Pos pltAfcsRoll("PLT_AFCS_ROLL", PLT_AFCS_ROLL);
+DcsBios::Switch2Pos pltAfcsPitch("PLT_AFCS_PITCH", PLT_AFCS_PTICH);
 DcsBios::Switch2Pos pltFuelDump("PLT_FUEL_DUMP", PLT_FUEL_DUMP_PIN);
 DcsBios::Switch3Pos pltAntiSkidSw("PLT_ANTI_SKID_SW", PLT_ANTI_SKID_BOTH_PIN, PLT_ANTI_SKID_SPOILER_BK_PIN);
 DcsBios::Switch3Pos pltRefuelProbe("PLT_REFUEL_PROBE", PLT_REFUEL_PROBE_EXT_ALL_PIN, PLT_REFUEL_PROBE_RET_PIN);
