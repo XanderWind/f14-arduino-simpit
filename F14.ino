@@ -3,6 +3,11 @@
 #include <SwitchMatrix.h>
 #include <DcsBios.h>
 
+const int PLT_ENGINE_AIRSTART_ON = 31;
+const int PLT_ENGINE_CRANK_R = 30;
+const int PLT_ENGINE_CRANK_L = 29;
+const int PLT_INLET_RAMPS_R = 28;
+const int PLT_INLET_RAMPS_L = 27;
 const int PLT_ENGINE_MODE_L = 26; 
 const int PLT_ENGINE_MODE_R = 25;
 const int PLT_ASY_THRUST_LIMIT = 24;
@@ -29,6 +34,11 @@ const int GEAR_UP_PIN = 4;
 const int MASTER_RESET_PIN = 3;
 const int EMERGENCY_STORES_JETTISON_PIN = 2;
 
+
+DcsBios::Switch2Pos pltEngineAirstart("PLT_ENGINE_AIRSTART", PLT_ENGINE_AIRSTART_ON);
+DcsBios::Switch3Pos pltEngineCrank("PLT_ENGINE_CRANK", PLT_ENGINE_CRANK_R, PLT_ENGINE_CRANK_L);
+DcsBios::Switch2Pos pltInletRampsR("PLT_INLET_RAMPS_R", PLT_INLET_RAMPS_R);
+DcsBios::Switch2Pos pltInletRampsL("PLT_INLET_RAMPS_L", PLT_INLET_RAMPS_L);
 DcsBios::Switch2Pos pltEngineModeL("PLT_ENGINE_MODE_L", PLT_ENGINE_MODE_L);
 DcsBios::Switch2Pos pltEngineModeR("PLT_ENGINE_MODE_R", PLT_ENGINE_MODE_R);
 DcsBios::Switch2Pos pltAsyThrustLimit("PLT_ASY_THRUST_LIMIT", PLT_ASY_THRUST_LIMIT);
