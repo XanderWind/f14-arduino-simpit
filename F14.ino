@@ -3,6 +3,15 @@
 #include <SwitchMatrix.h>
 #include <DcsBios.h>
 
+
+const int PLT_HUD_MODE_LAND = 39
+const int PLT_HUD_MODE_A2G = 38
+const int PLT_HUD_MODE_A2A = 37;
+const int PLT_HUD_MODE_CRUISE = 36;
+const int PLT_HUD_MODE_TAKEOFF = 35; 
+const int PLT_HOOK_LEVER = 34;
+const int PLT_THOTTLE_MODE_AUTO = 33;
+const int PLT_THOTTLE_MODE_MAN = 32;
 const int PLT_ENGINE_AIRSTART_ON = 31;
 const int PLT_ENGINE_CRANK_R = 30;
 const int PLT_ENGINE_CRANK_L = 29;
@@ -34,7 +43,13 @@ const int GEAR_UP_PIN = 4;
 const int MASTER_RESET_PIN = 3;
 const int EMERGENCY_STORES_JETTISON_PIN = 2;
 
-
+DcsBios::Switch2Pos pltHudModeLand("PLT_HUD_MODE_LAND", PLT_HUD_MODE_LAND);
+DcsBios::Switch2Pos pltHudModeA2g("PLT_HUD_MODE_A2G", PLT_HUD_MODE_A2G);
+DcsBios::Switch2Pos pltHudModeA2a("PLT_HUD_MODE_A2A", PLT_HUD_MODE_A2A);
+DcsBios::Switch2Pos pltHudModeCruise("PLT_HUD_MODE_CRUISE", PLT_HUD_MODE_CRUISE);
+DcsBios::Switch2Pos pltHudModeTakeoff("PLT_HUD_MODE_TAKEOFF", PLT_HUD_MODE_TAKEOFF);
+DcsBios::Switch2Pos pltHookLever("PLT_HOOK_LEVER", PLT_HOOK_LEVER);
+DcsBios::Switch3Pos pltThrottleMode("PLT_THROTTLE_MODE", PLT_THOTTLE_MODE_MAN, PLT_THOTTLE_MODE_AUTO);
 DcsBios::Switch2Pos pltEngineAirstart("PLT_ENGINE_AIRSTART", PLT_ENGINE_AIRSTART_ON);
 DcsBios::Switch3Pos pltEngineCrank("PLT_ENGINE_CRANK", PLT_ENGINE_CRANK_R, PLT_ENGINE_CRANK_L);
 DcsBios::Switch2Pos pltInletRampsR("PLT_INLET_RAMPS_R", PLT_INLET_RAMPS_R);
