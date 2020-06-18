@@ -4,8 +4,8 @@
 #include <DcsBios.h>
 
 
-const int PLT_HUD_MODE_LAND = 39
-const int PLT_HUD_MODE_A2G = 38
+const int PLT_HUD_MODE_LAND = 39;
+const int PLT_HUD_MODE_A2G = 38;
 const int PLT_HUD_MODE_A2A = 37;
 const int PLT_HUD_MODE_CRUISE = 36;
 const int PLT_HUD_MODE_TAKEOFF = 35; 
