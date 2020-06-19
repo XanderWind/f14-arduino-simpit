@@ -3,6 +3,10 @@
 #include <SwitchMatrix.h>
 #include <DcsBios.h>
 
+const int PLT_HUD_MODE_AWL = 54; 
+const int PLT_HUD_DECLUTTER = 53; 
+const int PLT_VDI_MODE_LAND = 52;
+const int PLT_VDI_MODE_DISP = 51;
 const int PLT_HSD_DIS_ECM = 50; 
 const int PLT_HSD_DIS_NAV = 49;
 const int PLT_HSD_ECM_OVER = 48;
@@ -53,6 +57,10 @@ const int GEAR_UP_PIN = 4;
 const int MASTER_RESET_PIN = 3;
 const int EMERGENCY_STORES_JETTISON_PIN = 2;
 
+DcsBios::Switch2Pos pltHudModeAwl("PLT_HUD_MODE_AWL", PLT_HUD_MODE_AWL);
+DcsBios::Switch2Pos pltHudDeclutter("PLT_HUD_DECLUTTER", PLT_HUD_DECLUTTER);
+DcsBios::Switch2Pos pltVdiModeLand("PLT_VDI_MODE_LAND", PLT_VDI_MODE_LAND);
+DcsBios::Switch2Pos pltVdiModeDisp("PLT_VDI_MODE_DISP", PLT_VDI_MODE_DISP);
 DcsBios::Switch3Pos pltHsdDisMode("PLT_HSD_DIS_MODE", PLT_HSD_DIS_NAV, PLT_HSD_DIS_ECM);
 DcsBios::Switch2Pos pltHsdEcmOver("PLT_HSD_ECM_OVER", PLT_HSD_ECM_OVER);
 DcsBios::Switch2Pos pltNavSteerMan("PLT_NAV_STEER_MAN", PLT_NAV_STEER_MAN);
