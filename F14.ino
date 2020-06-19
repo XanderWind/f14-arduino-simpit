@@ -3,7 +3,17 @@
 #include <SwitchMatrix.h>
 #include <DcsBios.h>
 
-
+const int PLT_HSD_DIS_ECM = 50; 
+const int PLT_HSD_DIS_NAV = 49;
+const int PLT_HSD_ECM_OVER = 48;
+const int PLT_NAV_STEER_MAN = 47; 
+const int PLT_NAV_STEER_VECTOR = 46; 
+const int PLT_NAV_STEER_AWL = 45; 
+const int PLT_NAV_STEER_DEST = 44;
+const int PLT_NAV_STEER_TACAN = 43; 
+const int PLT_VDI_PW_SW = 42; 
+const int PLT_HUD_PW_SW = 41; 
+const int PLT_HSD_PW_SW = 40;
 const int PLT_HUD_MODE_LAND = 39;
 const int PLT_HUD_MODE_A2G = 38;
 const int PLT_HUD_MODE_A2A = 37;
@@ -43,6 +53,16 @@ const int GEAR_UP_PIN = 4;
 const int MASTER_RESET_PIN = 3;
 const int EMERGENCY_STORES_JETTISON_PIN = 2;
 
+DcsBios::Switch3Pos pltHsdDisMode("PLT_HSD_DIS_MODE", PLT_HSD_DIS_NAV, PLT_HSD_DIS_ECM);
+DcsBios::Switch2Pos pltHsdEcmOver("PLT_HSD_ECM_OVER", PLT_HSD_ECM_OVER);
+DcsBios::Switch2Pos pltNavSteerMan("PLT_NAV_STEER_MAN", PLT_NAV_STEER_MAN);
+DcsBios::Switch2Pos pltNavSteerVector("PLT_NAV_STEER_VECTOR", PLT_NAV_STEER_VECTOR);
+DcsBios::Switch2Pos pltNavSteerAwl("PLT_NAV_STEER_AWL", PLT_NAV_STEER_AWL);
+DcsBios::Switch2Pos pltNavSteerDest("PLT_NAV_STEER_DEST", PLT_NAV_STEER_DEST);
+DcsBios::Switch2Pos pltNavSteerTacan("PLT_NAV_STEER_TACAN", PLT_NAV_STEER_TACAN);
+DcsBios::Switch2Pos pltVdiPwSw("PLT_VDI_PW_SW", PLT_VDI_PW_SW);
+DcsBios::Switch2Pos pltHudPwSw("PLT_HUD_PW_SW", PLT_HUD_PW_SW);
+DcsBios::Switch2Pos pltHsdPwSw("PLT_HSD_PW_SW", PLT_HSD_PW_SW);
 DcsBios::Switch2Pos pltHudModeLand("PLT_HUD_MODE_LAND", PLT_HUD_MODE_LAND);
 DcsBios::Switch2Pos pltHudModeA2g("PLT_HUD_MODE_A2G", PLT_HUD_MODE_A2G);
 DcsBios::Switch2Pos pltHudModeA2a("PLT_HUD_MODE_A2A", PLT_HUD_MODE_A2A);
